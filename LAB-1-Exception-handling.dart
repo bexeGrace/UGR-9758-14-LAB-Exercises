@@ -25,4 +25,15 @@ void main() {
   } on FileSystemException catch (e) {
     print('File not found error caught: $e');
   }
+
+// Excercise 3
+
+  try {
+    int result = 10 ~/ 0;
+    print('Result: $result');
+  } catch (e) {
+    print('Error caught: $e');
+  } finally {
+    print('Finally block executed');
+  }
 }
