@@ -1,11 +1,11 @@
-Future<void> fetchData() {
+Future<int> fetchNumber() {
   return Future.delayed(Duration(seconds: 2), () {
-    print('Fetching data...');
+    return 42; // Simulating a delayed computation
   });
 }
 
 void main() async {
-  print('Before fetching data');
-  await fetchData();
-  print('After fetching data');
+  print('Fetching number...');
+  int result = await fetchNumber();
+  print('The fetched number is: $result');
 }
