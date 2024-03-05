@@ -1,6 +1,8 @@
 import 'dart:io';
 
 void main() {
+  // Excercise 1
+
   print('Enter a number from 1 to 7: ');
   int? dayOfWeek = int.parse(stdin.readLineSync()!);
   switch (dayOfWeek) {
@@ -27,5 +29,17 @@ void main() {
       break;
     default:
       print('Invalid day of the week');
+  }
+
+  // Excercise 2
+
+  int n = 10;
+  int first = 0, second = 1;
+
+  for (int i = 0; i < n; i++) {
+    print(first);
+    int next = first + second;
+    first = second;
+    second = next;
   }
 }
