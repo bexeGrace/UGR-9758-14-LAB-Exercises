@@ -6,6 +6,12 @@ class Car {
   int year;
 
   Car(this.brand, this.model, this.year);
+
+  // Excercise 2
+
+  void makeSound() {
+    print('Vroom Vroom');
+  }
 }
 
 void main() {
