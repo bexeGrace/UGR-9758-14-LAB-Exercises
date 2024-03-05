@@ -1,0 +1,28 @@
+name: my_project_name
+description: A description of your Dart project
+
+# Version of your Dart project
+version: 1.0.0
+
+# Author information
+author: Your Name <your_email@example.com>
+
+# Environment constraints for Dart SDK and Flutter (if applicable)
+environment:
+  sdk: '>=2.12.0 <3.0.0' # Minimum Dart SDK version required for the project
+  flutter: '>=2.12.0 <3.0.0' # Minimum Flutter SDK version required (if using Flutter)
+
+# Dependencies section specifying the dependencies of your Dart project
+dependencies:
+  # Dart packages hosted on pub.dev
+  package_name: ^version_number
+  another_package_name: ^version_number
+
+# Dev dependencies section specifying development dependencies
+dev_dependencies:
+  # Dart packages used only for development
+  dev_package_name: ^version_number
+
+# Additional settings and configurations for your Dart project
+# For example, settings for publishing your package on pub.dev
+# You can add any other settings specific to your project
