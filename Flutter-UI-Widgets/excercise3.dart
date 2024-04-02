@@ -1,108 +1,107 @@
 import 'package:flutter/material.dart';
 
 void main() {
-  runApp(const MyApp());
+  runApp(BMICalculator());
 }
 
-class MyApp extends StatelessWidget {
-  const MyApp({super.key});
-
+class BMICalculator extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
-      title: 'Shopping Cart',
-      home: ShoppingCartPage(),
+    return MaterialApp(
+      theme: ThemeData.dark().copyWith(
+        primaryColor: Color(0xFF0A0E21),
+        scaffoldBackgroundColor: Color(0xFF0A0E21),
+      ),
+      home: InputPage(),
     );
   }
 }
 
-class ShoppingCartPage extends StatelessWidget {
-  const ShoppingCartPage({super.key});
+class InputPage extends StatefulWidget {
+  @override
+  _InputPageState createState() => _InputPageState();
+}
+
+class _InputPageState extends State<InputPage> {
+  int height = 180;
+  int weight = 60;
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Cart'),
-        leading: IconButton(
-          icon: const Icon(Icons.arrow_back),
-          onPressed: () {
-            Navigator.pop(context);
-          },
-        ),
+        title: Text('BMI CALCULATOR'),
       ),
       body: Column(
-        crossAxisAlignment: CrossAxisAlignment.stretch,
+        mainAxisAlignment: MainAxisAlignment.center,
         children: [
-          const Padding(
-            padding: EdgeInsets.all(16.0),
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                Text(
-                  'Shopping Cart',
-                  style: TextStyle(
-                    fontSize: 24.0,
-                    fontWeight: FontWeight.bold,
-                  ),
-                ),
-                SizedBox(height: 8.0),
-                Text(
-                  'subtitle',
-                  style: TextStyle(
-                    fontSize: 16.0,
-                  ),
-                ),
-              ],
+          Text(
+            'Height',
+            style: TextStyle(
+              fontSize: 20.0,
             ),
           ),
-          Expanded(
-            child: ListView.builder(
-              itemCount: 3,
-              itemBuilder: (context, index) {
-                return ListTile(
-                  leading: CircleAvatar(
-                    child: Image.asset('assets/image.png'),
-                  ),
-                  title: const Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Text('Item Name'),
-                      Text('\$10.00'), // Replace with actual price
-                    ],
-                  ),
-                  trailing: const Column(
-                    mainAxisSize: MainAxisSize.min,
-                    children: [
-                      Icon(Icons.add),
-                      Text('1'),
-                      Icon(Icons.remove),
-                    ],
-                  ),
-                );
-              },
+          Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Text(
+                '$height',
+                style: TextStyle(
+                  fontSize: 50.0,
+                  fontWeight: FontWeight.w900,
+                ),
+              ),
+              Text(
+                'cm',
+                style: TextStyle(
+                  fontSize: 20.0,
+                ),
+              ),
+            ],
+          ),
+          Slider(
+            value: height.toDouble(),
+            min: 120,
+            max: 220,
+            onChanged: (double newValue) {
+              setState(() {
+                height = newValue.round();
+              });
+            },
+          ),
+          Text(
+            'Weight',
+            style: TextStyle(
+              fontSize: 20.0,
             ),
           ),
-          Padding(
-            padding: const EdgeInsets.all(16.0),
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
-                const Text(
-                  'Total: \$30.00', // Replace with actual total price
-                  style: TextStyle(
-                    fontSize: 20.0,
-                    fontWeight: FontWeight.bold,
-                  ),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Text(
+                '$weight',
+                style: TextStyle(
+                  fontSize: 50.0,
+                  fontWeight: FontWeight.w900,
                 ),
-                ElevatedButton(
-                  onPressed: () {
-                    // Proceed to checkout
-                  },
-                  child: const Text('Checkout'),
+              ),
+              Text(
+                'kg',
+                style: TextStyle(
+                  fontSize: 20.0,
                 ),
-              ],
-            ),
+              ),
+            ],
+          ),
+          Slider(
+            value: weight.toDouble(),
+            min: 30,
+            max: 150,
+            onChanged: (double newValue) {
+              setState(() {
+                weight = newValue.round();
+              });
+            },
           ),
         ],
       ),
