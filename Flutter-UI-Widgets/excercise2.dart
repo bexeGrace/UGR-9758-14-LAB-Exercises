@@ -71,18 +71,12 @@ class ShoppingCartPage extends StatelessWidget {
                       Text('\$10.00'), // Replace with actual price
                     ],
                   ),
-                  trailing: Column(
+                  trailing: const Column(
                     mainAxisSize: MainAxisSize.min,
                     children: [
-                      IconButton(
-                        icon: const Icon(Icons.remove),
-                        onPressed: () {},
-                      ),
-                      const Text('1'),
-                      IconButton(
-                        icon: const Icon(Icons.add),
-                        onPressed: () {},
-                      ),
+                      Icon(Icons.add),
+                      Text('1'),
+                      Icon(Icons.remove),
                     ],
                   ),
                 );
