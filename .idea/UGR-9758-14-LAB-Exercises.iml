@@ -2,7 +2,29 @@
 <module type="JAVA_MODULE" version="4">
   <component name="NewModuleRootManager" inherit-compiler-output="true">
     <exclude-output />
-    <content url="file://$MODULE_DIR$" />
+    <content url="file://$MODULE_DIR$">
+      <excludeFolder url="file://$MODULE_DIR$/.dart_tool" />
+      <excludeFolder url="file://$MODULE_DIR$/.pub" />
+      <excludeFolder url="file://$MODULE_DIR$/State-Management/counter_bloc/.dart_tool" />
+      <excludeFolder url="file://$MODULE_DIR$/State-Management/counter_bloc/.pub" />
+      <excludeFolder url="file://$MODULE_DIR$/State-Management/counter_bloc/build" />
+      <excludeFolder url="file://$MODULE_DIR$/State-Management/counter_provider/.dart_tool" />
+      <excludeFolder url="file://$MODULE_DIR$/State-Management/counter_provider/.pub" />
+      <excludeFolder url="file://$MODULE_DIR$/State-Management/counter_provider/build" />
+      <excludeFolder url="file://$MODULE_DIR$/State-Management/counter_riverpod/.dart_tool" />
+      <excludeFolder url="file://$MODULE_DIR$/State-Management/counter_riverpod/.pub" />
+      <excludeFolder url="file://$MODULE_DIR$/State-Management/counter_riverpod/build" />
+      <excludeFolder url="file://$MODULE_DIR$/State-Management/todo_bloc/.dart_tool" />
+      <excludeFolder url="file://$MODULE_DIR$/State-Management/todo_bloc/.pub" />
+      <excludeFolder url="file://$MODULE_DIR$/State-Management/todo_bloc/build" />
+      <excludeFolder url="file://$MODULE_DIR$/State-Management/todo_provider/.dart_tool" />
+      <excludeFolder url="file://$MODULE_DIR$/State-Management/todo_provider/.pub" />
+      <excludeFolder url="file://$MODULE_DIR$/State-Management/todo_provider/build" />
+      <excludeFolder url="file://$MODULE_DIR$/State-Management/todo_riverpod/.dart_tool" />
+      <excludeFolder url="file://$MODULE_DIR$/State-Management/todo_riverpod/.pub" />
+      <excludeFolder url="file://$MODULE_DIR$/State-Management/todo_riverpod/build" />
+      <excludeFolder url="file://$MODULE_DIR$/build" />
+    </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
   </component>
